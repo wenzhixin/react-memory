@@ -8,9 +8,9 @@
 
 **PS：** 由于对 React 的学习也是皮毛，但是在这里，我希望这个小游戏能够成为学习 React 的最佳开发结构，并且随着自己的不断学习，将会继续改进和完善这里的代码。假如您有任何的建议和反馈，请给我留言，谢谢！
 
-在开始之前我们先来看看我们的 [demo]()，游戏非常简单，输入想要记忆的文字点击开始记忆即可。试玩了我们的游戏之后，那么就开始吧。
+在开始之前我们先来看看我们的 [demo](http://demos.wenzhixin.net.cn/react-memory)，游戏非常简单，输入想要记忆的文字，然后点击开始记忆即可。试玩了我们的游戏之后，那么现在就开始吧。
 
-先来看看我们的目录结构，你可以在 GitHub 上找到相对应的[源码]()：
+先来看看我们的目录结构，你可以在 GitHub 上找到相对应的[源码](https://github.com/wenzhixin/react-memory)：
 ```
 ├── bower_components
 │   ├── bootstrap
@@ -43,10 +43,10 @@
 
 * bower_components 和 bower.json 是安装 bower 组件的目录和配置信息。
 * node_modules 和 package.json 是安装 npm 模块的目录和配置信息。
-* docs 用于存放我们的文档。
+* docs 用于存放我们的文档信息。
 * css 和 js 用于存放样式和 JavaScript 源码。
 * build 用于存放最后编译的 css 和 js 文件。
-* index.html 是我们游戏的主页面。
+* index.html 是我们游戏的主页面，也就是 React 的入口。
 
 ### 初始化
 
@@ -98,13 +98,13 @@ npm install --save-dev browserify watchify reactify
 npm install -g browserify watchify http-server
 ```
 
-可以看到，我们安装了运行游戏时所需要的依赖包：react，[lodash](https://github.com/lodash/lodash/) 模块，以及 [bootstrap](https://github.com/twbs/bootstrap) 组件，lodash 是一个非常使用的工具库，游戏中我们使用到了好多它所提供的操作 array 的简单的方法，react 和 bootstrap 的话就不用说了。
+可以看到，我们安装了运行游戏时所需要的依赖包：react，[lodash](https://github.com/lodash/lodash/) 模块，以及 [bootstrap](https://github.com/twbs/bootstrap) 组件，lodash 是一个非常实用的工具库，游戏中我们使用到了好多它所提供的操作 array 的简单方法，react 和 bootstrap 的话就不用说了。
 
 ### React 组件依赖层次
 
 ![](docs/component.png)
 
-React 中都是以组件的方式来体验的，从上往下，我们切割成非常小，功能单一的组件，分别是：
+React 中都是以组件的方式来体现的，从上往下，我们切割成非常小、功能单一的组件，分别是：
 * Game：游戏组件
 * WordForm：文字输入组价
 * Board：游戏面板组件
@@ -140,7 +140,7 @@ var Component = React.createClass({
 module.exports = Component;
 ```
 
-对于各行代码的意思，已加了详细的注释说明，在下面的 js 代码中，我们只关注组件的核心部分，也就是说，与模板相同的地方，我们就不做解释了。
+对于各行代码的意思，已加了详细的注释说明，在下面的 js 代码中，也是一样在代码中做了详细注释，由于我们只关注组件的核心部分，与模板相同的地方，我们就不做解释了。
 
 ### Game
 
