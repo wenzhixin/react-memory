@@ -1,0 +1,6 @@
+digraph memory {
+    Game -> WordForm;
+    Game -> Board;
+    Board -> Status;
+    Board -> Title;
+}

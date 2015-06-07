@@ -1,0 +1,137 @@
+@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    padding-top: 80px;
+    overflow-y: scroll;
+}
+
+.error {
+    color: red;
+}
+
+@-webkit-keyframes wronganim {
+    to {
+        background-color: red;
+    }
+}
+
+@-moz-keyframes wronganim {
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes wronganim {
+    to {
+        background-color: red;
+    }
+}
+
+@-webkit-keyframes correctanim {
+    to {
+        background-color: green;
+        color: white;
+    }
+}
+
+@-moz-keyframes correctanim {
+    to {
+        background-color: green;
+        color: white;
+    }
+}
+
+@keyframes correctanim {
+    to {
+        background-color: green;
+        color: white;
+    }
+}
+
+.brick > div {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s linear;
+    -moz-transition: -moz-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.brick > .front {
+    background-color: #AAA;
+}
+
+.brick, .brick div {
+    user-select: none;
+    cursor: pointer;
+}
+
+.brick {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.brick > .back {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0.3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 0.3s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.brick.wrong > .back {
+    -webkit-animation-name: wronganim;
+    -moz-animation-name: wronganim;
+    animation-name: wronganim;
+}
+
+.brick.correct > .back {
+    -webkit-animation-name: correctanim;
+    -moz-animation-name: correctanim;
+    animation-name: correctanim;
+}
+
+.brick > .back {
+    -webkit-transform: perspective(80px) rotateY(180deg) translate3d(0px, 0px, 2px);
+    -moz-transform: perspective(80px) rotateY(180deg) translate3d(0px, 0px, 2px);
+    transform: perspective(80px) rotateY(180deg) translate3d(0px, 0px, 2px);
+}
+
+.brick.correct > .front, .brick.wrong > .front, .brick.revealed > .front {
+    -webkit-transform: perspective(80px) rotateY(-180deg) translate3d(0px, 0px, 2px);
+    -moz-transform: perspective(80px) rotateY(-180deg) translate3d(0px, 0px, 2px);
+    transform: perspective(80px) rotateY(-180deg) translate3d(0px, 0px, 2px);
+}
+
+.brick.correct > .back, .brick.wrong > .back, .brick.revealed > .back {
+    -webkit-transform: perspective(80px) rotateY(0deg) translate3d(0px, 0px, 1px);
+    -moz-transform: perspective(80px) rotateY(0deg) translate3d(0px, 0px, 1px);
+    transform: perspective(80px) rotateY(0deg) translate3d(0px, 0px, 1px);
+}
+
+.front {
+    font-size: 2em;
+}

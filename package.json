@@ -1,0 +1,23 @@
+{
+  "name": "react-memory",
+  "version": "1.0.0",
+  "description": "基于 nodejs + bower + react 的文字记忆游戏。",
+  "browserify": {
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
+  },
+  "author": "wenzhixin <wenzhixin2010@gmail.com> (http://wenzhixin.net.cn/)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.3",
+    "reactify": "^1.1.1",
+    "watchify": "^3.2.1"
+  }
+}
