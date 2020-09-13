@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.11",
-    "react": "^0.13.3"
+    "react": "^0.14.0"
   },
   "devDependencies": {
     "browserify": "^10.2.3",
